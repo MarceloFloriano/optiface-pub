@@ -1,0 +1,1 @@
+import{d as o}from"./index.5aedcbbb.js";import{b as a}from"./index.4ffd6295.js";import"./pupilometro.8a1f9651.js";var i=a(async({app:r})=>{r.config.globalProperties.$db=o,globalThis.$db=o});export{i as default};
