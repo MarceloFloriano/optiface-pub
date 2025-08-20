@@ -1,0 +1,1 @@
+import{u as o}from"./index.05119e0e.js";import{b as i}from"./index.c8ab69f2.js";import"./atendimento.30c20b95.js";var a=i(({app:t})=>{t.config.globalProperties.$utils=o,globalThis.$utils=o});export{a as default};
