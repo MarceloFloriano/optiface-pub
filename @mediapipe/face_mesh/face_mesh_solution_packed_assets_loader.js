@@ -55,6 +55,13 @@
                 total: size
               };
             } else {
+              if (!Module.dataFileDownloads) Module.dataFileDownloads = {};
+              if (!Module.dataFileDownloads[url]) {
+                Module.dataFileDownloads[url] = {
+                  loaded: 0,
+                  total: size
+                };
+              }
               Module.dataFileDownloads[url].loaded = event.loaded;
             }
             var total = 0;
@@ -135,6 +142,12 @@ Module['FS_createPath']("/third_party/mediapipe/modules", "face_detection", true
             },
             finish: function(byteArray) {
               var that = this;
+              if (typeof Module['FS_createPreloadedFile'] !== 'function') {
+                setTimeout(function() {
+                  that.finish(byteArray);
+                }, 16);
+                return;
+              }
       
           Module['FS_createPreloadedFile'](this.name, null, byteArray, true, true, function() {
             Module['removeRunDependency']('fp ' + that.name);
