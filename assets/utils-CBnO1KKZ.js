@@ -1,0 +1,1 @@
+import{u as o}from"./index-CoWCa2yh.js";import{bO as i}from"./index-AdTJE0h0.js";import"./atendimento-C2qQL_Um.js";import"./date-EYjGOTXy.js";const m=i(({app:t})=>{t.config.globalProperties.$utils=o,globalThis.$utils=o});export{m as default};
